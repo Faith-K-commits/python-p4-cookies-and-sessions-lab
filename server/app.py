@@ -34,7 +34,7 @@ def show_article(id):
     
     article = Article.query.filter_by(id=id).first()
     if article:
-        return jsonify(article.to_dict())  # Assuming Article model has a to_dict method
+        return jsonify(article.to_dict())  
     else:
         return jsonify({"error": "Article not found"}), 404
     
